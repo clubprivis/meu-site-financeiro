@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Finanças Simples</title>
+<style>
+body { font-family: Arial, sans-serif; background:#f5f5f5; margin:0; padding:0; }
+nav { background:#fff; padding:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; }
+nav button { margin-right:10px; padding:8px 12px; border:0; background:#eee; border-radius:6px; }
+section { background:#fff; margin:20px; padding:20px; border-radius:10px; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+.hidden { display:none; }
+h2 { margin-top:0; }
+pre { background:#f0f0f0; padding:10px; border-radius:6px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <button onclick="show('home')">Home</button>
+  <button onclick="show('vermelho')">Sair do vermelho</button>
+  <button onclick="show('negociar')">Negociar dívidas</button>
+  <button onclick="show('economizar')">Economizar</button>
+</nav>
+
+<section id="home">
+  <h2>Guia Completo de Organização Financeira</h2>
+  <p>Bem-vindo ao seu guia simples e direto sobre como sair do vermelho, negociar dívidas, controlar gastos e economizar.</p>
+</section>
+
+<section id="vermelho" class="hidden">
+  <h2>Como sair do vermelho</h2>
+  <ol>
+    <li>Liste todas as dívidas.</li>
+    <li>Priorize juros altos primeiro.</li>
+    <li>Corte gastos imediatos não essenciais.</li>
+    <li>Crie um plano mensal realista.</li>
+  </ol>
+</section>
+
+<section id="negociar" class="hidden">
+  <h2>Modelo para negociar dívidas</h2>
+  <pre>
+Olá, sou [Seu Nome].  
+CPF: [xxx.xxx.xxx-xx]  
+Quero negociar a dívida no valor de R$ [valor].  
+Posso pagar R$ [oferta] ou parcelado em [x vezes].  
+Aguardo retorno com a proposta formal.  
+  </pre>
+</section>
+
+<section id="economizar" class="hidden">
+  <h2>Formas simples de economizar</h2>
+  <ul>
+    <li>Cortar assinaturas que não usa.</li>
+    <li>Evitar compras impulsivas por 48h.</li>
+    <li>Comprar no atacado itens do dia a dia.</li>
+    <li>Registrar todos os gastos.</li>
+  </ul>
+</section>
+
+<script>
+function show(id) {
+  document.querySelectorAll("section").forEach(s => s.classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
